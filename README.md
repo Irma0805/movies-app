@@ -1,16 +1,37 @@
-# React + Vite
+# 🎬 Movies App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aplicación web para cinéfilos que permite explorar películas,
+consultar información detallada y gestionar una lista de favoritas.
 
-Currently, two official plugins are available:
+## 🛠️ Tecnologías
+- React + Vite
+- CSS Variables (sin librerías externas)
+- TMDB API
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 📐 Principios de desarrollo
+- **KISS** — código simple y legible
+- **DRY** — sin repetición de lógica
+- **YAGNI** — solo lo necesario
 
-## React Compiler
+## 📁 Estructura del proyecto
+src/
+├── components/
+│   ├── atoms/        → piezas mínimas (botón, rating, badge)
+│   ├── molecules/    → combinación de átomos (MovieCard)
+│   └── organisms/    → secciones completas (Header, BottomNav)
+├── context/          → estado global compartido (Favorites)
+├── hooks/            → lógica reutilizable (useMovies)
+├── pages/            → vistas principales
+├── services/         → integración con TMDB API
+└── styles/           → variables y estilos globales
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🚀 Cómo arrancar el proyecto
+1. Clona el repositorio
+2. Copia `.env.example` como `.env` y añade tu API key de TMDB
+3. `npm install`
+4. `npm run dev`
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🌿 Ramas
+- `main` → producción
+- `develop` → integración
+- `feature/*` → funcionalidades
