@@ -6,71 +6,76 @@
 
 :root {
   /* COLORES BASE */
-  --color-bg:         #0A0A0D;
-  --color-surface:    #13131A;
-  --color-surface-2:  #1C1C26;
-  --color-surface-3:  #252530;
+  --color-bg: #0A0A0D;
+  --color-surface: #13131A;
+  --color-surface-2: #1C1C26;
+  --color-surface-3: #252530;
 
   /* ACENTO — el dorado que ves en botones y rating */
-  --color-accent:     #D4A843;
+  --color-accent: #D4A843;
   --color-accent-dim: rgba(212, 168, 67, 0.15);
 
   /* TEXTO */
-  --color-text:       #EDE9E0;
+  --color-text: #EDE9E0;
   --color-text-muted: #7A7880;
-  --color-text-dim:   #4A4855;
+  --color-text-dim: #4A4855;
 
   /* BORDES */
-  --color-border:     rgba(255, 255, 255, 0.07);
+  --color-border: rgba(255, 255, 255, 0.07);
   --color-border-med: rgba(255, 255, 255, 0.12);
 
   /* SEMÁNTICOS */
-  --color-error:   #E05252;
+  --color-error: #E05252;
   --color-success: #52B788;
 
   /* TIPOGRAFÍA */
-  --font-family:        system-ui, -apple-system, sans-serif;
-  --font-size-xs:       11px;
-  --font-size-sm:       13px;
-  --font-size-md:       15px;
-  --font-size-lg:       18px;
-  --font-size-xl:       22px;
-  --font-size-2xl:      28px;
-  --font-weight-reg:    400;
-  --font-weight-bold:   700;
-  --font-weight-black:  900;
+  --font-family: 'Inter', system-ui, sans-serif;
+  --font-family-title: 'Playfair Display', serif;
+  --font-size-xs: 11px;
+  --font-size-sm: 13px;
+  --font-size-md: 15px;
+  --font-size-lg: 18px;
+  --font-size-xl: 22px;
+  --font-size-2xl: 28px;
+  --font-weight-reg: 400;
+  --font-weight-bold: 700;
+  --font-weight-black: 900;
 
   /* ESPACIADOS */
-  --space-xs:  4px;
-  --space-sm:  8px;
-  --space-md:  16px;
-  --space-lg:  24px;
-  --space-xl:  32px;
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
 
   /* RADIOS */
-  --radius-sm:   6px;
-  --radius-md:   10px;
-  --radius-lg:   16px;
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
   --radius-full: 9999px;
 
   /* TRANSICIONES */
   --transition-fast: 150ms ease;
-  --transition-mid:  250ms ease;
+  --transition-mid: 250ms ease;
 
   /* LAYOUT */
   --bottom-nav-height: 64px;
-  --max-width:         480px;
+  --max-width: 480px;
 }
 
 /* RESET BASE */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   -webkit-tap-highlight-color: transparent;
 }
 
-html, body, #root {
+html,
+body,
+#root {
   height: 100%;
   background-color: var(--color-bg);
   color: var(--color-text);
@@ -81,27 +86,37 @@ html, body, #root {
 }
 
 /* Oculta scrollbar manteniendo funcionalidad */
-::-webkit-scrollbar { display: none; }
-* { scrollbar-width: none; }
+::-webkit-scrollbar {
+  display: none;
+}
+
+* {
+  scrollbar-width: none;
+}
 
 /* ANIMACIONES GLOBALES */
 @keyframes spin {
-  to { transform: rotate(360deg); }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 @keyframes shimmer {
-  0%   { background-position: -200% 0; }
-  100% { background-position:  200% 0; }
+  0% {
+    background-position: -200% 0;
+  }
+
+  100% {
+    background-position: 200% 0;
+  }
 }
 
 /* Clase reutilizable para skeletons de carga */
 .skeleton {
-  background: linear-gradient(
-    90deg,
-    var(--color-surface)   25%,
-    var(--color-surface-2) 50%,
-    var(--color-surface)   75%
-  );
+  background: linear-gradient(90deg,
+      var(--color-surface) 25%,
+      var(--color-surface-2) 50%,
+      var(--color-surface) 75%);
   background-size: 200% 100%;
   animation: shimmer 1.5s infinite;
   border-radius: var(--radius-sm);
