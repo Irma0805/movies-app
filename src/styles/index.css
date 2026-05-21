@@ -1,0 +1,136 @@
+/* ============================================
+   MOVIES APP — ESTILOS GLOBALES
+   Variables reutilizables en toda la app.
+   Nunca uses valores hardcodeados fuera de aquí.
+   ============================================ */
+
+:root {
+  /* COLORES BASE */
+  --color-bg:               #151311;
+  --color-surface:          #161310;
+  --color-surface-2:        #1E1B19;
+  --color-surface-3:        #221F1D;
+  --color-surface-4:        #2C2927;
+  --color-surface-5:        #373432;
+
+  /* ACENTO — dorado ámbar para highlights y CTAs */
+  --color-accent:           #F4BE5D;
+  --color-accent-dark:      #C9973A;
+  --color-accent-dim:       rgba(244, 190, 93, 0.15);
+
+  /* TEXTO */
+  --color-text:             #E8E1DD;
+  --color-text-muted:       #A89880;
+  --color-text-dim:         #9C8F7D;
+  --color-text-on-accent:   #422C00;
+
+  /* BORDES */
+  --color-border:           #4F4537;
+  --color-border-med:       rgba(255, 255, 255, 0.12);
+
+  /* SEMÁNTICOS */
+  --color-error:            #FFB4AB;
+  --color-error-bg:         #93000A;
+  --color-success:          #52B788;
+
+  /* TIPOGRAFÍA */
+  --font-display:           'Playfair Display', serif;
+  --font-body:              'DM Sans', system-ui, sans-serif;
+  --font-size-xs:           12px;
+  --font-size-sm:           13px;
+  --font-size-md:           16px;
+  --font-size-lg:           20px;
+  --font-size-xl:           24px;
+  --font-size-2xl:          32px;
+  --font-size-3xl:          48px;
+  --font-weight-reg:        400;
+  --font-weight-med:        500;
+  --font-weight-bold:       700;
+  --line-height-tight:      1.2;
+  --line-height-normal:     1.5;
+  --line-height-relaxed:    1.75;
+  --letter-spacing-wide:    0.08em;
+  --letter-spacing-tight:   -0.02em;
+
+  /* ESPACIADOS — escala de 8px */
+  --space-xs:   4px;
+  --space-sm:   8px;
+  --space-md:   16px;
+  --space-lg:   24px;
+  --space-xl:   48px;
+  --space-2xl:  64px;
+
+  /* RADIOS */
+  --radius-sm:   4px;
+  --radius-md:   8px;
+  --radius-lg:   16px;
+  --radius-xl:   24px;
+  --radius-full: 9999px;
+
+  /* ASPECT RATIO PÓSTERS */
+  --poster-ratio: 2 / 3;
+
+  /* TRANSICIONES */
+  --transition-fast: 150ms ease;
+  --transition-mid:  250ms ease;
+
+  /* LAYOUT */
+  --bottom-nav-height:      64px;
+  --max-width:              480px;
+  --container-margin:       20px;
+}
+
+/* RESET BASE */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html, body, #root {
+  height: 100%;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  font-size: var(--font-size-md);
+  line-height: var(--line-height-normal);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Oculta scrollbar manteniendo funcionalidad */
+::-webkit-scrollbar { display: none; }
+* { scrollbar-width: none; }
+
+/* ANIMACIONES GLOBALES */
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes shimmer {
+  0%   { background-position: -200% 0; }
+  100% { background-position:  200% 0; }
+}
+
+/* SPINNER */
+.spinner {
+  width: 32px;
+  height: 32px;
+  border: 3px solid var(--color-surface-3);
+  border-top-color: var(--color-accent);
+  border-radius: var(--radius-full);
+  animation: spin 0.8s linear infinite;
+}
+
+/* SKELETON */
+.skeleton {
+  background: linear-gradient(
+    90deg,
+    var(--color-surface)   25%,
+    var(--color-surface-2) 50%,
+    var(--color-surface)   75%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+  border-radius: var(--radius-sm);
+}
