@@ -1,0 +1,27 @@
+
+.movie-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  cursor: pointer;
+}
+
+.movie-card__poster {
+  position: relative;
+}
+
+.movie-card h3 {
+  color: var(--color-text);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-bold);
+  margin-top: var(--space-xs);
+}
+
+.movie-card__poster i {
+  position: absolute;
+  top: var(--space-sm);
+  right: var(--space-sm);
+  color: var(--color-accent);
+  font-size: var(--font-size-lg);
+  cursor: pointer;
+}
