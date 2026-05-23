@@ -1,0 +1,8 @@
+
+.movie-poster {
+  width: 100%;
+  aspect-ratio: var(--poster-ratio);
+  object-fit: cover;
+  border-radius: var(--radius-md);
+  display: block;
+}
