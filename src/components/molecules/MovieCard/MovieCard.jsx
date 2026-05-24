@@ -11,9 +11,14 @@ function MovieCard({ title, poster, year, genre, rating, isFavorite }) {
         <i className={isFavorite ? 'fa-solid fa-heart' : 'fa-regular fa-heart'}></i>
       </div>
       <h3>{title}</h3>
-      <Badge label={year} />
-      <Badge label={genre} />
-      <Rating value={rating} />
+      <div className="movie-card__info">
+        <div className="movie-card__meta">
+          <Badge label={year} />
+          <span className="movie-card__dot">·</span>
+          <Badge label={genre} />
+        </div>
+        <Rating value={rating} />
+      </div>
     </div>
   );
 }

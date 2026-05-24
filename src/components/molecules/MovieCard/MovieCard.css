@@ -8,6 +8,10 @@
 
 .movie-card__poster {
   position: relative;
+  width: 100%;
+  aspect-ratio: 2/3;
+  overflow: hidden;
+  border-radius: var(--radius-md);
 }
 
 .movie-card h3 {
@@ -25,3 +29,21 @@
   font-size: var(--font-size-lg);
   cursor: pointer;
 }
+
+.movie-card__info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.movie-card__meta {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+}
+
+.movie-card__dot {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-xs);
+}
+

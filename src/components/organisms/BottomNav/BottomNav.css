@@ -1,12 +1,14 @@
-/* BOTTOM NAV — mobile first */
+
 .bottom-nav {
   display: flex;
   justify-content: space-around;
   align-items: center;
   position: fixed;
   bottom: 0;
-  left: 0;
-  right: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: var(--max-width);
   height: var(--bottom-nav-height);
   background-color: var(--color-surface);
   border-top: 0.5px solid var(--color-border);
