@@ -35,3 +35,6 @@ src/
 - `main` → producción
 - `develop` → integración
 - `feature/*` → funcionalidades
+
+## 🚀 Deploy
+https://movies-app-sooty-seven.vercel.app
