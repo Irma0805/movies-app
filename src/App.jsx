@@ -4,10 +4,15 @@ import Badge from './components/atoms/Badge/Badge';
 import Button from './components/atoms/Button/Button';
 import MoviePoster from './components/atoms/MoviePoster/MoviePoster';
 import MovieCard from './components/molecules/MovieCard/MovieCard';
+import Header from './components/organisms/Header/Header';
+import BottomNav from './components/organisms/BottomNav/BottomNav';
+
+
 
 function App() {
   return (
     <div>
+      <Header />
       <Spinner />
       <Rating value={8.4} />
       <Badge label="2024" />
@@ -20,6 +25,7 @@ function App() {
         rating={8.4}
         isFavorite={false}
       />
+      <BottomNav activeTab="home" />
     </div>
   );
 }
