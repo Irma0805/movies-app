@@ -12,7 +12,7 @@ useEffect(() => {
 
     try {
       const data = await fetchFn();
-      setMovies(data.results);
+      setMovies(data);
     } catch (err) {
       setError(err.message);
     } finally {
