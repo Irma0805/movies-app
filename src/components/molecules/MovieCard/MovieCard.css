@@ -47,3 +47,10 @@
   font-size: var(--font-size-xs);
 }
 
+@media (min-width: 768px) {
+  .movie-card:hover .movie-card__poster {
+    box-shadow: 0 0 20px var(--color-accent-dim);
+    transform: scale(1.02);
+    transition: var(--transition-mid);
+  }
+}

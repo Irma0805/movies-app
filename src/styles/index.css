@@ -124,3 +124,10 @@ html, body, #root {
   animation: shimmer 1.5s infinite;
   border-radius: var(--radius-sm);
 }
+
+@media (min-width: 768px) {
+  :root {
+    --max-width: 1280px;
+    --container-margin: 10px;
+  }
+}

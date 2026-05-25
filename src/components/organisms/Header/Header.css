@@ -8,7 +8,7 @@
   border-bottom: 0.5px solid var(--color-border);
   position: sticky;
   top: 0;
-  z-index: 100;
+  z-index: 10;
 }
 
 .header__title {
@@ -29,4 +29,11 @@
   display: flex;
   align-items: center;
   gap: var(--space-sm);
+}
+
+@media (min-width: 768px) {
+  .header__title {
+    font-size: var(--font-size-2xl);
+    text-transform: uppercase;
+  }
 }

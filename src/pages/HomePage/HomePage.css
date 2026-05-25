@@ -19,3 +19,13 @@
   height: 100%;
   object-fit: cover;
 }
+
+@media (min-width: 768px) {
+  .home-page__content {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  .home-page {
+    padding-bottom: 0;
+  }
+}
