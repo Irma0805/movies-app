@@ -1,6 +1,5 @@
 import './HomePage.css';
-import Header from '../../components/organisms/Header/Header';
-import BottomNav from '../../components/organisms/BottomNav/BottomNav';
+import PageLayout from '../../components/templates/PageLayout/PageLayout';
 import MovieCard from '../../components/molecules/MovieCard/MovieCard'; 
 import { getPopularMovies } from '../../services/tmdb';
 import Spinner from '../../components/atoms/Spinner/Spinner';
@@ -12,8 +11,7 @@ function HomePage() {
     const { movies, loading, error } = useMovies(getPopularMovies);
 
  return (
-  <div className="home-page">
-    <Header />
+  <PageLayout>
     {loading && <Spinner />}
     {error && <p>Error al cargar las películas</p>}
     <main className="home-page__content">
@@ -22,8 +20,7 @@ function HomePage() {
           
       ))}
     </main>
-    <BottomNav activeTab="home" />
-  </div>
+  </PageLayout>
 );  
 }
 export default HomePage;
