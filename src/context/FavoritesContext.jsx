@@ -1,5 +1,6 @@
 import { createContext, useState, useEffect} from 'react';
 import { getGenres } from '../services/tmdb';
+import { toggleFavoriteReducer } from './favoritesReducer';
 
 export const FavoritesContext = createContext();
 
