@@ -1,6 +1,7 @@
 const BASE_URL = 'https://api.themoviedb.org/3';
 const API_KEY = import.meta.env.VITE_TMDB_KEY;
 export const IMAGE_BASE_URL = 'https://image.tmdb.org/t/p/w500';
+export const BACKDROP_BASE_URL = 'https://image.tmdb.org/t/p/original';
 
 function normalizeMovie(movie) {
   return {
@@ -10,6 +11,7 @@ function normalizeMovie(movie) {
     year: new Date(movie.release_date).getFullYear(),
     rating: Math.round(movie.vote_average * 10) / 10,
     genre_ids: movie.genre_ids,
+    backdrop: movie.backdrop_path ? `${BACKDROP_BASE_URL}${movie.backdrop_path}` : null,
   };
 }
 

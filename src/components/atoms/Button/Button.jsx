@@ -1,8 +1,11 @@
 import './Button.css';
 
-function Button({ label, isActive }) {
+function Button({ label, isActive, type, variant }) {
   return (
-    <button className={isActive ? 'button button--active' : 'button'}>
+    <button
+      type={type}
+      className={`button ${isActive ? 'button--active' : ''} ${variant ? `button--${variant}` : ''}`}
+    >
       {label}
     </button>
   );

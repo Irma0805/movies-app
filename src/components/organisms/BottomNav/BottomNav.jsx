@@ -4,11 +4,11 @@ import './BottomNav.css';
 function BottomNav() {
   return (
     <nav className="bottom-nav">
-      <NavLink to="/" className={({ isActive }) => `bottom-nav__tab ${isActive ? 'bottom-nav__tab--active' : ''}`}>
+      <NavLink to="/login" className={({ isActive }) => `bottom-nav__tab ${isActive ? 'bottom-nav__tab--active' : ''}`}>
         <i className="fa-solid fa-house"></i>
         <span>Home</span>
       </NavLink>
-      <NavLink to="/explore" className={({ isActive }) => `bottom-nav__tab ${isActive ? 'bottom-nav__tab--active' : ''}`}>
+      <NavLink to="/home" className={({ isActive }) => `bottom-nav__tab ${isActive ? 'bottom-nav__tab--active' : ''}`}>
         <i className="fa-solid fa-compass"></i>
         <span>Explore</span>
       </NavLink>
